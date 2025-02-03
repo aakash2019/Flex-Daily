@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497369083156",
+    "project_id": "flex-daily",
+    "storage_bucket": "flex-daily.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497369083156:android:2a746d0563a9d7b0af6601",
+        "android_client_info": {
+          "package_name": "com.example.flexdaily"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVYbhM1CHW4QKOYORLHRvqYrBPq5Q02GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
