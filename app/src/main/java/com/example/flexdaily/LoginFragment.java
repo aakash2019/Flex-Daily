@@ -1,5 +1,6 @@
 package com.example.flexdaily;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -57,8 +58,8 @@ public class LoginFragment extends Fragment {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(getActivity(), "Login Successful!", Toast.LENGTH_SHORT).show();
-//                        startActivity(new Intent(getActivity(), HomeActivity.class));
-//                        getActivity().finish();
+                        startActivity(new Intent(getActivity(), ExercisesActivity.class));
+                        getActivity().finish();
                     } else {
                         Toast.makeText(getActivity(), "Login Failed: " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                     }
