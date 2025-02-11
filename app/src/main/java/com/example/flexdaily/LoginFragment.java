@@ -58,7 +58,7 @@ public class LoginFragment extends Fragment {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(getActivity(), "Login Successful!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getActivity(), ExercisesActivity.class));
+                        startActivity(new Intent(getActivity(), UserTabsActivity.class));
                         getActivity().finish();
                     } else {
                         Toast.makeText(getActivity(), "Login Failed: " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();

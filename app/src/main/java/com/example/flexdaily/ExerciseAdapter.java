@@ -26,6 +26,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     public void onBindViewHolder(@NonNull ExerciseViewHolder holder, int position) {
         Exercise exercise = exerciseList.get(position);
         holder.name.setText(exercise.getName());
+        holder.type.setText("Type: " + exercise.getType());
+        holder.muscle.setText("Muscle: " + exercise.getMuscle());
         holder.equipment.setText("Equipment: " + exercise.getEquipment());
         holder.difficulty.setText("Difficulty: " + exercise.getDifficulty());
         holder.instructions.setText(exercise.getInstructions());
@@ -37,11 +39,13 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
     }
 
     static class ExerciseViewHolder extends RecyclerView.ViewHolder {
-        TextView name, equipment, difficulty, instructions;
+        TextView name, type, muscle, equipment, difficulty, instructions;
 
         public ExerciseViewHolder(View view) {
             super(view);
             name = view.findViewById(R.id.tvName);
+            type = view.findViewById(R.id.tvType);
+            muscle = view.findViewById(R.id.tvMuscle);
             equipment = view.findViewById(R.id.tvEquipment);
             difficulty = view.findViewById(R.id.tvDifficulty);
             instructions = view.findViewById(R.id.tvInstructions);

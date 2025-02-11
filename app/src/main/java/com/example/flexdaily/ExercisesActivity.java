@@ -21,7 +21,7 @@ public class ExercisesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ExerciseAdapter adapter;
     private List<Exercise> exerciseList = new ArrayList<>();
-    private static final String API_URL = "https://api.api-ninjas.com/v1/exercises?muscle=biceps";
+    private static final String API_URL = "https://api.api-ninjas.com/v1/exercises?muscle=chest";
     private static final String API_KEY = "HHtkzEQk9usKBeGORj7BSw==6QTqvmtBxvs8JpwN";
 
     @Override

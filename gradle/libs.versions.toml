@@ -12,6 +12,7 @@ firebaseAuth = "23.0.0"
 firebaseFirestore = "25.1.0"
 okhttp = "4.9.3"
 recyclerview = "1.2.1"
+volley = "1.2.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -25,6 +26,7 @@ firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+volley = { module = "com.android.volley:volley", version = "1.2.1" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

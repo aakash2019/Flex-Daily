@@ -8,16 +8,15 @@ import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static final int SPLASH_DURATION = 2000; // 3 seconds
+    private static final int SPLASH_DURATION = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Delay before switching to MainActivity
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            startActivity(new Intent(SplashActivity.this, AuthTabsActivity.class));
             finish();
         }, SPLASH_DURATION);
     }
