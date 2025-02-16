@@ -1,8 +1,11 @@
-package com.example.flexdaily;
+package com.example.flexdaily.adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.flexdaily.fragment.LoginFragment;
+import com.example.flexdaily.fragment.SignupFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 

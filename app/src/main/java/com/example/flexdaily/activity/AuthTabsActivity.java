@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.flexdaily.adapter.ViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.FirebaseApp;
 

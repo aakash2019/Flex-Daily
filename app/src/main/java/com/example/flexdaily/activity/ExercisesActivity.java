@@ -6,6 +6,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.flexdaily.adapter.ExerciseAdapter;
+import com.example.flexdaily.model.Exercise;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.IOException;
