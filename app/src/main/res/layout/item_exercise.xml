@@ -18,23 +18,29 @@
             android:id="@+id/tvName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/addImage"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.15"
+            app:srcCompat="@drawable/ic_add" />
 
         <ImageView
             android:id="@+id/favoriteImage"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
+            android:layout_weight="0.15"
             app:srcCompat="@drawable/ic_favourite" />
 
         <ImageView
             android:id="@+id/favouriteFilledImage"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_weight="0.2"
+            android:layout_weight="0.15"
             android:visibility="gone"
             app:srcCompat="@drawable/ic_favourite_filled" />
     </LinearLayout>

@@ -53,6 +53,16 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
         holder.difficulty.setText(difficulty);
         holder.instructions.setText(instructions);
 
+        holder.favoriteImage.setOnClickListener(v -> {
+            holder.favoriteImage.setVisibility(View.GONE);
+            holder.favouriteFilledImage.setVisibility(View.VISIBLE);
+        });
+
+        holder.favouriteFilledImage.setOnClickListener(v -> {
+            holder.favoriteImage.setVisibility(View.VISIBLE);
+            holder.favouriteFilledImage.setVisibility(View.GONE);
+        });
+
         holder.itemView.setOnClickListener(v -> showExercisePopup(holder.itemView.getContext(), exercise));
     }
 
@@ -63,6 +73,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
     static class ExerciseViewHolder extends RecyclerView.ViewHolder {
         TextView name, type, muscle, equipment, difficulty, instructions;
+        ImageView favoriteImage, favouriteFilledImage;
 
         public ExerciseViewHolder(View view) {
             super(view);
@@ -72,6 +83,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
             equipment = view.findViewById(R.id.tvEquipment);
             difficulty = view.findViewById(R.id.tvDifficulty);
             instructions = view.findViewById(R.id.tvInstructions);
+            favoriteImage = view.findViewById(R.id.favoriteImage);
+            favouriteFilledImage = view.findViewById(R.id.favouriteFilledImage);
         }
     }
 

@@ -9,9 +9,9 @@
         android:icon="@drawable/ic_favourite"
         android:title="@string/favourites_bottom_tab" />
     <item
-        android:id="@+id/nav_schedule"
-        android:icon="@drawable/ic_schedule"
-        android:title="@string/schedule_bottom_tab" />
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_bottom_tab" />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_profile"

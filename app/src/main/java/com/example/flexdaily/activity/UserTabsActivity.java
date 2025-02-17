@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.example.flexdaily.R;
 import com.example.flexdaily.fragment.FavouriteFragment;
 import com.example.flexdaily.fragment.HomeFragment;
-import com.example.flexdaily.fragment.ScheduleFragment;
+import com.example.flexdaily.fragment.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.HashMap;
@@ -39,13 +39,13 @@ public class UserTabsActivity extends AppCompatActivity {
         fragmentMap = new HashMap<>();
         fragmentMap.put(R.id.nav_home, new HomeFragment());
         fragmentMap.put(R.id.nav_favourite, new FavouriteFragment());
-        fragmentMap.put(R.id.nav_schedule, new ScheduleFragment());
+        fragmentMap.put(R.id.nav_search, new SearchFragment());
         fragmentMap.put(R.id.nav_profile, new ProfileFragment());
 
         // Set HomeFragment as the default fragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, fragmentMap.get(R.id.nav_home))
+                    .replace(R.id.fragment_container, fragmentMap.get(R.id.nav_search))
                     .commit();
         }
 
