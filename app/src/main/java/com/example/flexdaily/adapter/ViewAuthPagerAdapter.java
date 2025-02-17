@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.flexdaily.fragment.LoginFragment;
 import com.example.flexdaily.fragment.SignupFragment;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewAuthPagerAdapter extends FragmentPagerAdapter {
 
-    public ViewPagerAdapter(FragmentManager fm) {
+    public ViewAuthPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -27,7 +27,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2; // Number of tabs
+        return 2;
     }
 
     @Override

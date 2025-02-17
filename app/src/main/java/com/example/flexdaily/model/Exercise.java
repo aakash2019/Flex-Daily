@@ -1,4 +1,4 @@
-package com.example.flexdaily;
+package com.example.flexdaily.model;
 
 public class Exercise {
     private String name;

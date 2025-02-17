@@ -1,4 +1,4 @@
-package com.example.flexdaily;
+package com.example.flexdaily.model;
 
 public class User {
     private String uid;

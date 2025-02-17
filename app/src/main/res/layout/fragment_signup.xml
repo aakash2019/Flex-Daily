@@ -11,7 +11,7 @@
         android:id="@+id/textUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
+        android:hint="@string/username_signup"
         android:inputType="text"
         android:backgroundTint="@android:color/white"
         android:textColor="@android:color/white"

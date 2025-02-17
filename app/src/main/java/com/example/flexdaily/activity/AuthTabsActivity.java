@@ -1,4 +1,4 @@
-package com.example.flexdaily;
+package com.example.flexdaily.activity;
 
 import android.os.Bundle;
 
@@ -9,7 +9,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.flexdaily.adapter.ViewPagerAdapter;
+import com.example.flexdaily.R;
+import com.example.flexdaily.adapter.ViewAuthPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.FirebaseApp;
 
@@ -33,7 +34,7 @@ public class AuthTabsActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.viewPager);
         TabLayout tabLayout = findViewById(R.id.tabLayout);
 
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewAuthPagerAdapter adapter = new ViewAuthPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }

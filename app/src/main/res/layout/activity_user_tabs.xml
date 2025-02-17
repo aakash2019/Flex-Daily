@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/user_tabs_layout"
-    tools:context=".UserTabsActivity">
+    tools:context=".activity.UserTabsActivity">
 
     <!-- FrameLayout to load different fragments -->
     <FrameLayout

@@ -1,4 +1,4 @@
-package com.example.flexdaily;
+package com.example.flexdaily.activity;
 
 import android.os.Bundle;
 
@@ -9,6 +9,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.flexdaily.R;
+import com.example.flexdaily.fragment.FavouriteFragment;
+import com.example.flexdaily.fragment.HomeFragment;
+import com.example.flexdaily.fragment.ScheduleFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.HashMap;

@@ -1,12 +1,14 @@
-package com.example.flexdaily;
+package com.example.flexdaily.activity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.flexdaily.R;
 import com.example.flexdaily.adapter.ExerciseAdapter;
 import com.example.flexdaily.model.Exercise;
 
@@ -25,7 +27,9 @@ public class ExercisesActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ExerciseAdapter adapter;
     private List<Exercise> exerciseList = new ArrayList<>();
-    private static final String API_URL = "https://api.api-ninjas.com/v1/exercises?muscle=chest";
+    private TextView exerciseTitle;
+    private String workoutOrMuscle = "";
+    private String exerciseType = "";
     private static final String API_KEY = "HHtkzEQk9usKBeGORj7BSw==6QTqvmtBxvs8JpwN";
 
     @Override
@@ -33,14 +37,49 @@ public class ExercisesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercises);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.exerciseRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        fetchExercises();
+        exerciseTitle = findViewById(R.id.exerciseTitle);
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            exerciseType = bundle.getString("exerciseType");
+            workoutOrMuscle = bundle.getString("workoutOrMuscle");
+            String text = exerciseType + " Exercises";
+            exerciseTitle.setText(text);
+        }
+
+
+        if (exerciseType.equals("Olympic Weightlifting")) {
+            exerciseType = "olympic_weightlifting";
+        } else if (exerciseType.equals("Lower Back")) {
+            exerciseType = "lower_back";
+        } else if (exerciseType.equals("Middle Back")) {
+            exerciseType = "middle_back";
+        }
+        else {
+            exerciseType = exerciseType.toLowerCase();
+        }
+
+        fetchExercises(workoutOrMuscle, exerciseType);
     }
 
-    private void fetchExercises() {
+    private void fetchExercises(String workoutOrMuscle, String exerciseType) {
         OkHttpClient client = new OkHttpClient();
+
+        String API_URL = "https://api.api-ninjas.com/v1/exercises";
+
+
+        if (workoutOrMuscle.equals("muscle")) {
+            API_URL = API_URL + "?muscle=" + exerciseType;
+        }
+        else{
+            API_URL = API_URL + "?type=" + exerciseType;
+        }
+
+        Log.d("API_URL", API_URL);
         Request request = new Request.Builder()
                 .url(API_URL)
                 .addHeader("X-Api-Key", API_KEY)

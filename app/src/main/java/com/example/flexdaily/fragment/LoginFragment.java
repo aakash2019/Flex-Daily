@@ -1,4 +1,4 @@
-package com.example.flexdaily;
+package com.example.flexdaily.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
+
+import com.example.flexdaily.R;
+import com.example.flexdaily.activity.UserTabsActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
