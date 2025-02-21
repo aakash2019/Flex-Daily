@@ -45,7 +45,7 @@ public class UserTabsActivity extends AppCompatActivity {
         // Set HomeFragment as the default fragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, fragmentMap.get(R.id.nav_search))
+                    .replace(R.id.fragment_container, fragmentMap.get(R.id.nav_home))
                     .commit();
         }
 

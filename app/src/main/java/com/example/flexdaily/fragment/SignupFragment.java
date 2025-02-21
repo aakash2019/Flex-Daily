@@ -1,5 +1,6 @@
 package com.example.flexdaily.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.flexdaily.R;
+import com.example.flexdaily.activity.UserTabsActivity;
 import com.example.flexdaily.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -65,6 +67,8 @@ public class SignupFragment extends Fragment {
                             saveUserToDatabase(uid, username, email);
                             Toast.makeText(getContext(), "Signup successful!", Toast.LENGTH_SHORT).show();
 
+                            startActivity(new Intent(getActivity(), UserTabsActivity.class));
+                            getActivity().finish();
                         }
                     } else {
                         Toast.makeText(getContext(), "Signup Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
