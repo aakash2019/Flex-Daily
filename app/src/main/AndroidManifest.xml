@@ -21,10 +21,10 @@
             android:name=".activity.ExercisesActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.UserTabsActivity"
+            android:name=".activity.AuthTabsActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.AuthTabsActivity"
+            android:name=".activity.UserTabsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

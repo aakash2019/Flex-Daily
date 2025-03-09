@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/auth_tabs"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:background="@drawable/background_image">
 
+    <!-- Title -->
     <TextView
-        android:id="@+id/tvTitleFavourite"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingBottom="16dp"
-        android:text="Favourites"
+        android:text="Favourite Exercises"
+        android:textSize="22sp"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"/>
 
-</RelativeLayout>
+    <!-- RecyclerView for displaying exercises -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFavouriteExercises"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"/>
+
+</LinearLayout>

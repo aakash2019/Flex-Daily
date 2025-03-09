@@ -10,6 +10,7 @@
     <string name="search_bottom_tab">Search</string>
     <string name="profile_bottom_tab">Profile</string>
     <string name="username_signup">Username</string>
+    <string name="favourites">Favourites</string>
 
     <string-array name="workout_types">
         <item>Cardio</item>
